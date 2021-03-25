@@ -5,6 +5,7 @@ import cv2
 #import RPi.GPIO as GPIO
 #mode=GPIO.getmode()
 
+import pygame
 
 import sys
 import time
@@ -26,6 +27,13 @@ GPIO.setup(fwd, GPIO.OUT)
 GPIO.setup(backward, GPIO.OUT)
 GPIO.setup(bkd, GPIO.OUT)
 
+
+def playaudio(audio):
+    pygame.mixer.init()
+    pygame.mixer.music.load(audio)
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
 
 
 
@@ -78,7 +86,10 @@ def motar(no):
         time.sleep(x)
         GPIO.output(fwd, GPIO.LOW)
         print('right key is pressed')
-
+    
+    elif no == 5:
+	print('5th key is pressed')
+	playaudio(audio='voice.mp3')
     return render_template('index.html')
 
 
