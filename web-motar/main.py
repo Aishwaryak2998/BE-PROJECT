@@ -37,7 +37,7 @@ def playaudio(audio):
 
 
 
-from playsound import playsound
+#from playsound import playsound    for windows only
 
 
 
@@ -83,7 +83,7 @@ def motar(no):
     elif no == 4:
         GPIO.output(fwd, GPIO.HIGH)
         print("Moving right")
-        time.sleep(x)
+        time.sleep(0.5)
         GPIO.output(fwd, GPIO.LOW)
         print('right key is pressed')
     
