@@ -75,17 +75,19 @@
 
 <script>
 
-var mic = document.getElementById('mic')
-mic.addEventListener('click',()=>{
-    fetch(`document.url`/5)
-    .then(res,()=>{
-        console.log(res)
-    })
-    .catch(e =>{
-        console.log(e)
-    })
-})
 
+    var mic = document.getElementById('mic')
+    mic.addEventListener('click',()=>{
+        console.log('mic button is clicked')
+        fetch(`${window.origin}/5`)
+        .then((res)=>{
+            console.log('sucess')
+        })
+        .catch(e =>{
+            console.log(e)
+        })
+    })
+    
 
 var button1 = document.getElementById('up')
 var button2 = document.getElementById('down')
@@ -94,42 +96,50 @@ var button4 = document.getElementById('right')
 
 
 button1.addEventListener('click',()=>{
-    fetch('http://127.0.0.1:8000/1')
+
+    console.log('hello')
+    console.log(`${window.origin}/1`)
+    fetch(`${window.origin}/1`)
     .then(()=>{
         console.log('success')
+    })
     .catch(err=>{
-        console.log(err)
+    console.log(err)
     })
-    })
+    
 })
 
+
 button2.addEventListener('click',()=>{
-    fetch('http://127.0.0.1:8000/2')
+    fetch(`${window.origin}/2`)
     .then(()=>{
         console.log('success')
+    })
     .catch(err=>{
         console.log(err)
     })
-    })
+    
 })
 
 button3.addEventListener('click',()=>{
-    fetch('http://127.0.0.1:8000/3')
+    fetch(`${window.origin}/3`)
     .then(()=>{
         console.log('success')
+    })
     .catch(err=>{
         console.log(err)
-    })
+    
     })
 })
 
 button4.addEventListener('click',()=>{
-    fetch('http://127.0.0.1:8000/4')
+    fetch(`${window.origin}/4`)
     .then(()=>{
         console.log('success')
+    })
     .catch(err=>{
         console.log(err)
-    })
+
     })
 })
 

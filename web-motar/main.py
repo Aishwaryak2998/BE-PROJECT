@@ -107,7 +107,7 @@ def gen(video):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
-
+'''
 @app.route('/<int:id>')
 def audio(id):
     if id == 4:
@@ -116,6 +116,7 @@ def audio(id):
         print('none')
     return render_template('index.html')
 
+'''
 
 @app.route('/video_feed')
 def video_feed():
