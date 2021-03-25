@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request  #importing the flask module
 import RPi.GPIO as GPIO
 from time import sleep
-servo_pin = 19 
+servo_pin = 2
 GPIO.setmode(GPIO.BCM)
 
 #defining servo pin as output pin
