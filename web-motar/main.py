@@ -118,6 +118,23 @@ def audio(id):
 
 '''
 
+
+@app.route('/slider',methods=['GET','POST'])
+def slider_op():
+    #print('endpoint is called')
+    #print('debug1')
+    if request.method == "POST":
+        #print('debug')
+        req = request.get_json()
+        #print(req)
+        
+        res = make_response(jsonify({'message':'json_received'}),200)
+        print(req['name'])
+    return render_template('index.html')
+
+
+
+
 @app.route('/video_feed')
 def video_feed():
     global video
