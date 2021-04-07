@@ -19,6 +19,8 @@ Forward=26
 fwd = 19
 backward=20
 bkd = 16
+servo_pin = 2
+
 sleeptime=1
 
 GPIO.setmode(GPIO.BCM)
@@ -26,6 +28,9 @@ GPIO.setup(Forward, GPIO.OUT)
 GPIO.setup(fwd, GPIO.OUT)
 GPIO.setup(backward, GPIO.OUT)
 GPIO.setup(bkd, GPIO.OUT)
+
+p = GPIO.PWM(servo_pin,50)
+p.start(0)
 
 
 def playaudio(audio):
@@ -130,6 +135,9 @@ def slider_op():
         
         res = make_response(jsonify({'message':'json_received'}),200)
         print(req['name'])
+        p.ChangeDutyCycle(float(req['name']))
+        sleep(1)
+        p.ChangeDutyCycle(0)
     return render_template('index.html')
 
 
