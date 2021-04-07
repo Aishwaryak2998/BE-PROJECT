@@ -1,5 +1,5 @@
+from flask import Flask,jsonify, Response ,make_response, render_template , request
 
-from flask import Flask, Response , render_template , request , jsonify,make_response
 import cv2
 #import time
 #import RPi.GPIO as GPIO
@@ -28,6 +28,7 @@ GPIO.setup(Forward, GPIO.OUT)
 GPIO.setup(fwd, GPIO.OUT)
 GPIO.setup(backward, GPIO.OUT)
 GPIO.setup(bkd, GPIO.OUT)
+GPIO.setup(servo_pin, GPIO.OUT)
 
 p = GPIO.PWM(servo_pin,50)
 p.start(0)
@@ -136,7 +137,7 @@ def slider_op():
         res = make_response(jsonify({'message':'json_received'}),200)
         print(req['name'])
         p.ChangeDutyCycle(float(req['name']))
-        sleep(1)
+        time.sleep(1)
         p.ChangeDutyCycle(0)
     return render_template('index.html')
 
