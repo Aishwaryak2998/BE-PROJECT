@@ -36,6 +36,15 @@
 
         let localStream
 
+ 
+        const  hasUserMedia = () =>{
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+            return !!navigator.getUserMedia; 
+            } 
+            
+
+        
+
         const getdata = () =>{
             navigator.mediaDevices.getUserMedia({audio:true,video:true})
             .then( (stream) =>{
@@ -43,6 +52,9 @@
                 localStream = stream
             
             })
+            .catch(error =>{
+                console.log(error)
+            }) 
         }
 
         getdata()
