@@ -26,7 +26,7 @@
     <div class="container-fluid bg-light">
         <div class="row">
             <div class="col-md-6 p-3 m-4">
-                <h1 class="text-center">Video Streaming Demonstration</h1>
+                <h1 class="text-center">Live Video Streaming</h1>
                 <img  id="bg" src="{{ url_for('video_feed') }}" >
             </div>
             <div class="col-md-3 p-3 m-4">
@@ -46,15 +46,22 @@
                 
                 
                 <div class="p-4 m-4 d-flex">
-                    <i id="mic" class="fas fa-microphone fa-4x ml-3 "></i>
-
+                    <!-- <i id="mic" class="fas fa-microphone fa-4x ml-3 "></i> -->
+                    <i class="fas fa-volume-up fa-4x ml-3 "></i>
                     <!-- <button id="video" type="submit" class="btn btn-primary  ml-5 btn-lg"> Video Call </button> -->
+                        
+                    
+                        <div class="ml-5">
 
-                        <p>Slider for camera</p>
+                            <b class="h4">Change Camera Position</b>
+                            <br>
+                            <br>
                         <!-- <input type="range" min="1" max="12" name="slider"> -->
                         <input  id='sli' type="range" min='1' max='12' name='slider2' >
                         
-                </div>
+                        </div>                  
+                        
+        
 
                 
 
