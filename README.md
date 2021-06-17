@@ -1,6 +1,9 @@
 # robocar
 
-final year Project 
+University of Mumbai 2021
+Final Year Project
+
+Authors: Aishwarya Kanchan, Ajay Magar and Omkar Naik
 
 pip install -r requirement.txt
 
