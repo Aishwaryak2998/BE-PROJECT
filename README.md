@@ -7,6 +7,6 @@ Authors: Aishwarya Kanchan, Ajay Magar and Omkar Naik
 
 pip install -r requirement.txt
 
-<a herf='www.google.com'>link</>
+<a herf='www.google.com'>link</a>
 
 Video: https://www.youtube.com/watch?v=RkVzbDTtMqE 
