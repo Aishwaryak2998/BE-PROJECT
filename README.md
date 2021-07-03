@@ -56,7 +56,7 @@ npm start
 
 ![video-call](https://raw.githubusercontent.com/Aishwaryak2998/BE-PROJECT/main/images/3..PNG)
  
- # Complete Project
+ # Completed Project
  
 ![final](https://raw.githubusercontent.com/Aishwaryak2998/BE-PROJECT/main/images/fina1.jpg)
 
